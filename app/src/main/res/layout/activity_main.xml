@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e1e7f4"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--The entire wrapper-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="219dp"
+                android:src="@drawable/russia_white" />
+
+            <!--Question 1-->
+            <LinearLayout
+                style="@style/ActualQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    style="@style/Question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Question 1" />
+
+                <TextView
+                    android:id="@+id/quiz_1"
+                    style="@style/ActualQuestionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="What country hosted the 2010 World Cup?" />
+
+                <RadioGroup
+                    android:id="@+id/worldCupHost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/england_radio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="England" />
+
+                    <RadioButton
+                        android:id="@+id/south_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="South Africa" />
+
+                    <RadioButton
+                        android:id="@+id/Egypt_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Egypt" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <!--Question 2-->
+            <LinearLayout
+                style="@style/ActualQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    style="@style/Question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Question 2" />
+
+                <TextView
+                    android:id="@+id/quiz_2"
+                    style="@style/ActualQuestionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Which of these countries won the World Cup more than once?" />
+
+                <CheckBox
+                    android:id="@+id/spain_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spain" />
+
+                <CheckBox
+                    android:id="@+id/uruguay_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Uruguay" />
+
+                <CheckBox
+                    android:id="@+id/argentina_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Argentina" />
+
+                <CheckBox
+                    android:id="@+id/england_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="England" />
+
+                <CheckBox
+                    android:id="@+id/brazil_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Brazil" />
+
+            </LinearLayout>
+
+            <!--Question 3-->
+            <LinearLayout
+                style="@style/ActualQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    style="@style/Question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Question 3" />
+
+                <TextView
+                    android:id="@+id/quiz_3"
+                    style="@style/ActualQuestionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Who was Nigeria's Coach at the 2010 World Cup?" />
+
+                <EditText
+                    android:id="@+id/coach_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Coach Name"
+                    android:inputType="textCapWords" />
+
+            </LinearLayout>
+
+            <!--Question 4-->
+            <LinearLayout
+                style="@style/ActualQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    style="@style/Question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Question 4" />
+
+                <TextView
+                    android:id="@+id/quiz_4"
+                    style="@style/ActualQuestionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="What is the higest position reached by Nigeria in the World Cup?" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/nineth_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9th" />
+
+                    <RadioButton
+                        android:id="@+id/twelfth_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12th" />
+
+                    <RadioButton
+                        android:id="@+id/eleventh_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11th" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!--Question 5-->
+            <LinearLayout
+                style="@style/ActualQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    style="@style/Question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Question 5" />
+
+                <TextView
+                    android:id="@+id/quiz_5"
+                    style="@style/ActualQuestionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="In what year did the World Cup begin?" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/button_1930"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1930" />
+
+                    <RadioButton
+                        android:id="@+id/button_1934"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1934" />
+
+                    <RadioButton
+                        android:id="@+id/button_1940"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1940" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <Button
+                style="@style/ButtonTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="submitButton"
+                android:text="Submit" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
