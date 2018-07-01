@@ -1,5 +1,6 @@
 package com.example.android.worldcupquiz;
 
+import android.app.Application;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,6 +26,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    boolean question1Correct;
+    boolean question2Correct;
+    boolean question3Correct;
+    boolean question4Correct;
+    boolean question5Correct;
+
 
     public void submitButton(View view) {
 
@@ -38,73 +45,84 @@ public class MainActivity extends AppCompatActivity {
             displayText += "\n World Cup Genius";
         } else displayText += "\n You tried shaa";
 
-        // Toast.makeText(this, displayText, Toast.LENGTH_LONG).show();
-
         Intent sendResult = new Intent(this, displayResult.class);
         sendResult.putExtra(Intent.EXTRA_TEXT, displayText);
+        sendResult.putExtra("question1", question1Correct);
+        sendResult.putExtra("question2", question2Correct);
+        sendResult.putExtra("question3", question3Correct);
+        sendResult.putExtra("question4", question4Correct);
+        sendResult.putExtra("question5", question5Correct);
         startActivity(sendResult);
     }
 
     private int evaluateQuestion1() {
-        RadioButton checkedButton = (RadioButton) findViewById(R.id.south_radio);
+        RadioButton checkedButton = findViewById(R.id.south_radio);
         if (checkedButton.isChecked()) {
+            question1Correct = true;
             return 1;
         } else {
+            question1Correct = false;
+            return 0;
+        }
+    }
+
+    private int evaluateQuestion2() {
+        CheckBox spain = findViewById(R.id.spain_checkbox);
+        CheckBox england = findViewById(R.id.england_checkbox);
+        CheckBox uruguay = findViewById(R.id.uruguay_checkbox);
+        CheckBox argentina = findViewById(R.id.argentina_checkbox);
+        CheckBox brazil = findViewById(R.id.brazil_checkbox);
+        boolean checked = !spain.isChecked() && uruguay.isChecked()
+                && argentina.isChecked() && !england.isChecked() && brazil.isChecked();
+
+        if (checked) {
+            question2Correct = true;
+            return 1;
+        } else {
+            question2Correct = false;
             return 0;
         }
 
     }
 
-    private int evaluateQuestion2() {
-        CheckBox spain = (CheckBox) findViewById(R.id.spain_checkbox);
-        CheckBox england = (CheckBox) findViewById(R.id.england_checkbox);
-        CheckBox uruguay = (CheckBox) findViewById(R.id.uruguay_checkbox);
-        CheckBox argentina = (CheckBox) findViewById(R.id.argentina_checkbox);
-        CheckBox brazil = (CheckBox) findViewById(R.id.brazil_checkbox);
-        boolean checked = !spain.isChecked() && uruguay.isChecked()
-                && argentina.isChecked() && !england.isChecked() && brazil.isChecked();
-
-        if (checked) {
-            return 1;
-        } else return 0;
-
-    }
-
     private int evaluateQuestion3() {
-        EditText coach = (EditText) findViewById(R.id.coach_text);
+        EditText coach = findViewById(R.id.coach_text);
         String coachNameEntered = coach.getText().toString();
-        if (coachNameEntered.equals("Lars Lagerback")) {
+        if (coachNameEntered.trim().equals("Lars Lagerback")) {
+            question3Correct = true;
             return 1;
-        } else return 0;
+        } else {
+            question3Correct = false;
+            return 0;
+        }
     }
 
     private int evaluateQuestion4() {
-        RadioButton checkedButton = (RadioButton) findViewById(R.id.nineth_radio);
+        RadioButton checkedButton = findViewById(R.id.nineth_radio);
         if (checkedButton.isChecked()) {
+            question4Correct = true;
             return 1;
         } else {
+            question4Correct = false;
             return 0;
         }
 
     }
 
     private int evaluateQuestion5() {
-        RadioButton checkedButton = (RadioButton) findViewById(R.id.button_1930);
+        RadioButton checkedButton = findViewById(R.id.button_1930);
         if (checkedButton.isChecked()) {
+            question5Correct = true;
             return 1;
         } else {
+            question5Correct = false;
             return 0;
         }
     }
 
     private String getPlayerName() {
-//        EditText enteredName = (EditText) findViewById(R.id.player_name);
-//        String playerName = enteredName.getText().toString();
-//
         Intent name = getIntent();
-        String playerName = name.getStringExtra(Intent.EXTRA_TEXT);
-
-        return playerName;
+        return name.getStringExtra(Intent.EXTRA_TEXT);
     }
 }
 

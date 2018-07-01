@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">World Cup Quiz</string>
+    <string name="ans_1Yes">Question 1: &lt;font color="#058709">&lt;b>South Africa&lt;/b> hosted the 2010 World Cup.&lt;/font></string>
+    <string name="ans_1No">Question 1: &lt;font color="#d60e04">&lt;b>South Africa&lt;/b> hosted the 2010 World Cup.&lt;/font></string>
+
+
+    <string name="ans_2Yes">&lt;br>&lt;br>Question 2: &lt;font color="#058709">&lt;b>Uruguay&lt;/b>, twice, &lt;b>Argentina&lt;/b>, twice and &lt;b>Brazil&lt;/b>, 5 times.&lt;/font></string>
+    <string name="ans_2No">&lt;br>&lt;br>Question 2: &lt;font color="#d60e04">&lt;b>Uruguay&lt;/b>, twice, &lt;b>Argentina&lt;/b>, twice and &lt;b>Brazil&lt;/b>, 5 times.&lt;/font></string>
+
+    <string name="ans_3Yes">&lt;br>&lt;br>Question 3: &lt;font color="#058709">&lt;b>Lars Lagerback&lt;/b> led the Nigerian team to the 2010 world cup.&lt;/font></string>
+    <string name="ans_3No">&lt;br>&lt;br>Question 3: &lt;font color="#d60e04">&lt;b>Lars Lagerback&lt;/b> led the Nigerian team to the 2010 world cup.&lt;/font></string>
+
+    <string name="ans_4Yes">&lt;br>&lt;br>Question 4:&lt;font color="#058709">Nigeria came &lt;b>9th&lt;/b> at the USA &apos;94 World Cup.&lt;/font></string>
+    <string name="ans_4No">&lt;br>&lt;br>Question 4:&lt;font color="#d60e04">Nigeria came &lt;b>9th&lt;/b> at the USA \'94 World Cup.&lt;/font></string>
+
+    <string name="ans_5Yes">&lt;br>&lt;br>Question 5:&lt;font color="#058709">The world cup started in &lt;b>1930.&lt;/b>&lt;/font></string>
+    <string name="ans_5No">&lt;br>&lt;br>Question 5:&lt;font color="#d60e04">The world cup started in &lt;b>1930.&lt;/b>&lt;/font></string>
+
+    <string name="viewAnswers">View Answers</string>
+
+    <string name="dialog">&lt;font color="#0b13ba">OK!!&lt;/font></string>
+
 </resources>

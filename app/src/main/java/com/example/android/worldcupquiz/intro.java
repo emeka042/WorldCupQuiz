@@ -17,12 +17,12 @@ public class intro extends AppCompatActivity {
         setContentView(R.layout.activity_intro);
     }
 
+    //What happens when Go is clicked
     public void onClickGo (View view){
-        EditText enteredName = (EditText) findViewById(R.id.player_name);
+        EditText enteredName = findViewById(R.id.player_name);
         String playerName = enteredName.getText().toString();
-        Log.v("Player Name", "player name is " + playerName);
 
-        if (playerName.isEmpty()){
+        if (playerName.trim().isEmpty()){
             //create toast and exit
             String toastMessage = "Please, enter your name!!";
             Toast.makeText(this, toastMessage, Toast.LENGTH_LONG).show();
