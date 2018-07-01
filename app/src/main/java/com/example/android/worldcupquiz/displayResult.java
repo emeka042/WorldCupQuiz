@@ -20,14 +20,14 @@ public class displayResult extends AppCompatActivity {
         displayResult();
     }
 
-    private void displayResult(){
+    private void displayResult() {
         Intent obtainResult = getIntent();
         String result = obtainResult.getStringExtra(Intent.EXTRA_TEXT);
         TextView resultDisplay = findViewById(R.id.result_display);
         resultDisplay.setText(result);
     }
 
-    private Dialog createDialog(){
+    private Dialog createDialog() {
         //Here, I want to create a dialog
         //the dialogBuilder is an object created that sets the properties of the dialog
         //theDialogItself is the actual dialog created
@@ -56,7 +56,7 @@ public class displayResult extends AppCompatActivity {
 
     }
 
-    public String getPlayerAnswer(){
+    public String getPlayerAnswer() {
         Intent answers = getIntent();
         boolean ans1 = answers.getBooleanExtra("question1", false);
         boolean ans2 = answers.getBooleanExtra("question2", false);
@@ -65,21 +65,31 @@ public class displayResult extends AppCompatActivity {
         boolean ans5 = answers.getBooleanExtra("question5", false);
 
         String ansDisplay;
-        if (ans1){
+        if (ans1) {
             ansDisplay = getString(R.string.ans_1Yes);
-            }else {ansDisplay = getString(R.string.ans_1No);}
-        if (ans2){
+        } else {
+            ansDisplay = getString(R.string.ans_1No);
+        }
+        if (ans2) {
             ansDisplay += getString(R.string.ans_2Yes);
-        }else {ansDisplay += getString(R.string.ans_2No);}
-        if (ans3){
+        } else {
+            ansDisplay += getString(R.string.ans_2No);
+        }
+        if (ans3) {
             ansDisplay += getString(R.string.ans_3Yes);
-        }else {ansDisplay += getString(R.string.ans_3No);}
-        if (ans4){
+        } else {
+            ansDisplay += getString(R.string.ans_3No);
+        }
+        if (ans4) {
             ansDisplay += getString(R.string.ans_4Yes);
-        }else {ansDisplay += getString(R.string.ans_4No);}
-        if (ans5){
+        } else {
+            ansDisplay += getString(R.string.ans_4No);
+        }
+        if (ans5) {
             ansDisplay += getString(R.string.ans_5Yes);
-        }else {ansDisplay += getString(R.string.ans_5No);}
+        } else {
+            ansDisplay += getString(R.string.ans_5No);
+        }
 
         return ansDisplay;
     }

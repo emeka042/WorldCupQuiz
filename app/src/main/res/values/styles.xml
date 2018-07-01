@@ -9,7 +9,7 @@
         <!--<item name="colorButtonNormal">#CCBF1111</item> -->
     </style>
 
-    <style name="Question" >
+    <style name="Question">
         <item name="android:background">@color/colorPrimary</item>
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:padding">6dp</item>

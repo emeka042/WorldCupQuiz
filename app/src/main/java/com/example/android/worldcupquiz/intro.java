@@ -18,20 +18,20 @@ public class intro extends AppCompatActivity {
     }
 
     //What happens when Go is clicked
-    public void onClickGo (View view){
+    public void onClickGo(View view) {
         EditText enteredName = findViewById(R.id.player_name);
         String playerName = enteredName.getText().toString();
 
-        if (playerName.trim().isEmpty()){
+        if (playerName.trim().isEmpty()) {
             //create toast and exit
             String toastMessage = "Please, enter your name!!";
             Toast.makeText(this, toastMessage, Toast.LENGTH_LONG).show();
-        }else{
+        } else {
             //create intent and send to main activity
             Intent openMain = new Intent(this, MainActivity.class);
             openMain.putExtra(Intent.EXTRA_TEXT, playerName);
             startActivity(openMain);
-            }
+        }
 
     }
 
